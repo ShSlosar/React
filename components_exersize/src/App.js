@@ -3,6 +3,7 @@ import './App.css';
 import MyNewComponent from './components/myNewComponent';
 import MySecondComponent from './components/mySecondComponent';
 import ThirdComponent from './components/thirdComponent';
+import LightSwitch from './components/lightSwitch';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <p>Forgotton Child.</p>
         <p>The baby.</p>
       </ThirdComponent>
+      <LightSwitch/>
     </div>
   );
 }

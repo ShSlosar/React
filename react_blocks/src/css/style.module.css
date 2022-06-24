@@ -1,0 +1,35 @@
+#header{
+    background-color: #6AA84F;
+    height: 150px;
+    width: inherit;
+    margin: 10px;
+}
+#main{
+    height: 500px;
+    width: 885px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background-color: #E06666;
+}
+#navigation{
+    height: 400px;
+    width: 300px;
+    margin-right: 140px;
+    display: inline-block;
+    background-color: #6FA8DC;
+    vertical-align: top;
+}
+.subContent{
+    background-color: #FFD966;
+    height:60%;
+    width: 25%;
+    margin: 30px;
+    display: inline-block;
+}
+#advert{
+    width: 785px;
+    height: 20%;
+    margin-left: 50px;
+    margin-top: 0%;
+    background-color: #B4A7D6;
+}

@@ -5,6 +5,7 @@ const UserForm = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [usernameError, setUserNameError] = useState("")
+    const [EmailError, setEmailError] = useState("")
     const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
 
     const handleUserName =(e)=> {
@@ -14,6 +15,15 @@ const UserForm = (props) => {
         }
         else{
             setUserNameError("");
+        }
+    }
+    const handleEmail=(e)=>{
+        setEmail(e.target.value);
+        if(e.target.value.length < 4){
+            setEmailError("Email must be longer")
+        }
+        else{
+            setEmailError("");
         }
     }
     const createUser = (e) => {
@@ -51,8 +61,13 @@ const UserForm = (props) => {
                 <input type="text" onChange={ (e) => handleUserName(e) } value={username} />
             </div>
             <div>
+                {
+                    EmailError?
+                    <p style={{color:'red'}}>{EmailError}</p>:
+                    ''
+                }
                 <label>Email Address: </label> 
-                <input type="text" onChange={ (e) => setEmail(e.target.value) } value={email} />
+                <input type="text" onChange={ (e) => handleEmail(e) } value={email} />
             </div>
             <div>
                 <label>Password: </label>

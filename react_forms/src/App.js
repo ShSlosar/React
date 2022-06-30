@@ -6,6 +6,7 @@ import Form from './components/formVal';
 function App() {
   return (
     <div className="App">
+      <ReducerComp />
       <Form />
     </div>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 
     
 const Groceries = (props) => {
-    const groceryList = ["pearl onions", "thyme", "cremini mushrooms", "butter"];
+    const groceryList = ["pearl onions", "thyme", "cremini mushrooms", "butter", "salt"];
     return ( 
         <ul>
             { groceryList.map( (item, i) => 

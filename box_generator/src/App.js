@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import ColorForm from "./components/colorInput";
+import BoxGenerator from "./components/boxComponent";
 
 function App() {
   const [currentMsg, setCurrentMsg] = useState("");
@@ -8,7 +8,7 @@ function App() {
   }
   return (
     <div className="App">
-      <ColorForm onNewColor={setNewColor}/>
+      <BoxGenerator />
     </div>
   );
 }

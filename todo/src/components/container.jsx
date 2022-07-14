@@ -4,9 +4,9 @@ import StyledListItem from "./styledListItem";
 const Container = props => {
     const [state, setState] = useState({
         todos : [],
-        newItem: "",
-        isDone: false
+        newItem: ""
     });
+    const [isDone, setIsDone] = useState(false);
 
     const handleFormSubmit = e => {
         e.preventDefault();
@@ -41,7 +41,8 @@ const Container = props => {
                             <input 
                                 type="checkbox" 
                                 checked={state.isDone}
-                                onChange={e => setState({...state, isDone: e.target.checked})}/>
+                                className={isDone ? "text-decoration-line-through" : ""}
+                                onChange={e => setIsDone(e.target.checked)}/>
                         </StyledListItem>
                     ))}
                 </ul>

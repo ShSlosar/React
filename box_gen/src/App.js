@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
+import "./App.css";
 import Drinks from './components/mapProps';
 import Groceries from './components/mapComponent';
 import MessageForm from './components/liftingStateComp';
 import MessageDisplay from './components/messageDisplay';
 import SendArgComp from './components/sendingArg';
+import FruitForm from './components/optionComp';
 
 function App() {
   const [currentMsg, setCurrentMsg] = useState("No messages yet...");
@@ -18,6 +20,7 @@ function App() {
       <MessageForm onNewMessage={ messageArrived } />
       <MessageDisplay message={currentMsg} />
       <SendArgComp movies={["Walli","Citizen Kane"]} />
+      <FruitForm fruits={["apple", "Mango", "Peach", "Grape", "Tomato?"]}/>
     </div>
   );
 }
